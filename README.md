@@ -121,6 +121,10 @@ You can silence deprecations warning by setting the environment variable THOR_SI
 
 1. You have to specify a Docset file (Ruby), eg. `sample.rb`
 
+```bash
+docker run --rm  -it --volume $PWD:/tmp --name cheatset jonasbn/cheatset generate samble.rb
+```
+
 ### `No such file or directory`
 
 ```text
@@ -140,8 +144,6 @@ Traceback (most recent call last):
 
 1. Due to the mounting og a volume, You cannot specify an arbitrary path to the Docset file.
 1. You have to work directly in the directory containing the Docset file
-
-Working directly:
 
 ```bash
 docker run --rm  -it --volume $PWD:/tmp --name cheatset jonasbn/cheatset generate samble.rb
