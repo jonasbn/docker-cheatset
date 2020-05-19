@@ -161,5 +161,5 @@ You can _possibly_ adjust the Docker invocation accordingly.
 
 [cheatsetgithub]: https://github.com/Kapeli/cheatset
 [dashapp]: https://kapeli.com/dash
-[dockerhubcheatset]: https://hub.docker.com/repository/docker/jonasbn/cheatset
+[dockerhubcheatset]: https://hub.docker.com/r/jonasbn/cheatset
 [dockerhubruby]: https://hub.docker.com/_/ruby
