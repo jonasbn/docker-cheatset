@@ -1,4 +1,4 @@
-FROM ruby:2.7-buster
+FROM ruby:3.0.0-buster
 
 RUN gem install cheatset
 
