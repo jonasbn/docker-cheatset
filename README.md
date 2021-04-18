@@ -110,7 +110,7 @@ Do note that cheatset does not work with Ruby 3 only Ruby 2 at this point so bum
 
 Currently we observe the following warning with a Ruby version 2 based base image:
 
-```
+```text
 /usr/local/bundle/gems/cheatset-1.4.2/lib/cheatset/creator.rb:89: warning: URI.escape is obsolete
 /usr/local/bundle/gems/cheatset-1.4.2/lib/cheatset/creator.rb:99: warning: URI.escape is obsolete
 /usr/local/bundle/gems/cheatset-1.4.2/lib/cheatset/creator.rb:99: warning: URI.escape is obsolete
@@ -120,20 +120,20 @@ Currently we observe the following warning with a Ruby version 2 based base imag
 
 Bumping to Ruby version 3 based base image, results in the following:
 
-```
+```text
 /usr/local/bundle/gems/cheatset-1.4.2/lib/cheatset/creator.rb:89:in `block in generate_database': undefined method `escape' for URI:Module (NoMethodError)
-	from /usr/local/bundle/gems/cheatset-1.4.2/lib/cheatset/creator.rb:88:in `each'
-	from /usr/local/bundle/gems/cheatset-1.4.2/lib/cheatset/creator.rb:88:in `generate_database'
-	from /usr/local/bundle/gems/cheatset-1.4.2/lib/cheatset/creator.rb:22:in `generate'
-	from /usr/local/bundle/gems/cheatset-1.4.2/lib/cheatset/dsl/context.rb:9:in `generate'
-	from /usr/local/bundle/gems/cheatset-1.4.2/lib/cheatset/cli.rb:27:in `generate'
-	from /usr/local/bundle/gems/thor-1.1.0/lib/thor/command.rb:27:in `run'
-	from /usr/local/bundle/gems/thor-1.1.0/lib/thor/invocation.rb:127:in `invoke_command'
-	from /usr/local/bundle/gems/thor-1.1.0/lib/thor.rb:392:in `dispatch'
-	from /usr/local/bundle/gems/thor-1.1.0/lib/thor/base.rb:485:in `start'
-	from /usr/local/bundle/gems/cheatset-1.4.2/bin/cheatset:6:in `<top (required)>'
-	from /usr/local/bundle/bin/cheatset:23:in `load'
-	from /usr/local/bundle/bin/cheatset:23:in `<main>'
+    from /usr/local/bundle/gems/cheatset-1.4.2/lib/cheatset/creator.rb:88:in `each'
+    from /usr/local/bundle/gems/cheatset-1.4.2/lib/cheatset/creator.rb:88:in `generate_database'
+    from /usr/local/bundle/gems/cheatset-1.4.2/lib/cheatset/creator.rb:22:in `generate'
+    from /usr/local/bundle/gems/cheatset-1.4.2/lib/cheatset/dsl/context.rb:9:in `generate'
+    from /usr/local/bundle/gems/cheatset-1.4.2/lib/cheatset/cli.rb:27:in `generate'
+    from /usr/local/bundle/gems/thor-1.1.0/lib/thor/command.rb:27:in `run'
+    from /usr/local/bundle/gems/thor-1.1.0/lib/thor/invocation.rb:127:in `invoke_command'
+    from /usr/local/bundle/gems/thor-1.1.0/lib/thor.rb:392:in `dispatch'
+    from /usr/local/bundle/gems/thor-1.1.0/lib/thor/base.rb:485:in `start'
+    from /usr/local/bundle/gems/cheatset-1.4.2/bin/cheatset:6:in `<top (required)>'
+    from /usr/local/bundle/bin/cheatset:23:in `load'
+    from /usr/local/bundle/bin/cheatset:23:in `<main>'
 ```
 
 ## Diagnostics
