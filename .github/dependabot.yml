@@ -13,3 +13,10 @@ updates:
     # Assign pull requests to an assignee
     assignees:
       - "jonasbn"
+  # Enable version updates for Actions
+  - package-ecosystem: "github-actions"
+    # Look for a `Dockerfile` in the `root` directory
+    directory: "/"
+    # Check for updates once a week
+    schedule:
+      interval: "weekly"

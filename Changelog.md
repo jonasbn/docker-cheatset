@@ -4,7 +4,7 @@
 
 - Bumped from Ruby 2.6.6 to 2.7
 
-- Warnings on URI being deprecated, have created [a PR upstream](https://github.com/Kapeli/cheatset/pull/35) exchanging URI for CGI as [per recommendation from the documentation](https://rubyapi.org/2.7/o/uri/escape)
+- Warnings on URI being deprecated, have created [a PR upstream](https://github.com/Kapeli/cheatset/pull/35) exchanging URI for CGI as [per recommendation from the documentation](https://rubyapi.org/2.7/o/uri/escape). `cheatset` version 1.4.2 does not work with Ruby 3
 
 ## 0.2.0 2020-06-06 Maintenance release
 
