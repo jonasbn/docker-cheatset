@@ -1,6 +1,6 @@
 # Docker encapsulation of cheatset
 
-`cheatset` ([GitHub][cheatsetgithub]) is a Ruby application for generating documentation sets (Docsets) for **[Dash.app][dashapp]**, primarily focused at cheatsheets.
+`cheatset` ([GitHub][cheatsetgithub]) is a Ruby application for generating documentation sets (Docsets) for **[Dash.app][dashapp]**, primarily focused on cheat sheets.
 
 This repository is a Docker encapsulation for `cheatset` for those of us, who generate Docsets, but do not have a Ruby toolchain available or want the hassle of maintaining one.
 
@@ -46,7 +46,7 @@ With a single argument:
 ```bash
 $ docker run --rm --volume "$PWD":/tmp -it --name cheatset jonasbn/cheatset help
 Commands:
-  cheatset generate FILE   # Generates cheatsheet out of a file
+  cheatset generate FILE   # Generates cheat sheet out of a file
   cheatset help [COMMAND]  # Describe available commands or one specific command
 ```
 
@@ -57,7 +57,7 @@ $ docker run --rm  -it --name cheatset jonasbn/cheatset help generate
 Usage:
   cheatset generate FILE
 
-Generates cheatsheet out of a file
+Generates cheat sheet out of a file
 ```
 
 Now lets generate something:
@@ -94,7 +94,7 @@ Try it out:
 ```bash
 $ cheatset
 Commands:
-  cheatset generate FILE   # Generates cheatsheet out of a file
+  cheatset generate FILE   # Generates cheat sheet out of a file
   cheatset help [COMMAND]  # Describe available commands or one specific command
 ```
 
@@ -172,7 +172,7 @@ Traceback (most recent call last):
 /usr/local/bundle/gems/cheatset-1.4.0/lib/cheatset/dsl/context.rb:5:in `read': No such file or directory @ rb_sysopen - dzil.rb (Errno::ENOENT)
 ```
 
-1. Due to the mounting og a volume, You cannot specify an arbitrary path to the Docset file.
+1. Due to the mounting of a volume, You cannot specify an arbitrary path to the Docset file.
 1. You have to work directly in the directory containing the Docset file
 
 ```bash
