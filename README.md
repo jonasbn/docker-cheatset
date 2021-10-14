@@ -35,7 +35,7 @@ $ docker run --rm --volume $PWD:/tmp jonasbn/cheatset:0.1.0
 And if you are want the latest build:
 
 ```bash
-$ docker pull jonasbn/cheatset:lastest
+$ docker pull jonasbn/cheatset:latest
 $ docker run --rm --volume $PWD:/tmp jonasbn/cheatset:latest
 ```
 
