@@ -10,8 +10,6 @@ name: Snyk Container
 on:
   push:
     branches: [master]
-  pull_request:
-    branches: [master]  
 jobs:
   snyk:
     runs-on: ubuntu-latest
