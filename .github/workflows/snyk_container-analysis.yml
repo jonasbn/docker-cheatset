@@ -8,8 +8,8 @@
 
 name: Snyk Container
 on:
-  pull_request:
-    branches: [master]
+  push:
+    branches: [master] 
 jobs:
   snyk:
     runs-on: ubuntu-latest
