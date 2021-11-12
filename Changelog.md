@@ -1,5 +1,8 @@
 # Change log for Docker-cheatset
 
+- `cheatset` gem updated to version [1.4.4](https://rubygems.org/gems/cheatset/versions/1.4.4) via PR #18 from @holyjak
+
+
 ## 0.4.0 2021-10-14 Maintenance release
 
 - `cheatset` gem updated to version [1.4.3](https://rubygems.org/gems/cheatset/versions/1.4.3). [My upstream PR](https://github.com/Kapeli/cheatset/pull/35) was accepted and the deprecated URI and `cheatset` now works with Ruby 3

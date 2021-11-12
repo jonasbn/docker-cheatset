@@ -181,6 +181,12 @@ docker run --rm  -it --volume $PWD:/tmp --name cheatset jonasbn/cheatset generat
 
 You can _possibly_ adjust the Docker invocation accordingly.
 
+## Acknowledgements
+
+- Jakub Holý (@holyjak), contributor
+
+- Bogdan Popescu (@kapeli), author of `cheatset` and **Dash.app**
+
 ## Resources and References
 
 - [GitHub: cheatset][cheatsetgithub]
