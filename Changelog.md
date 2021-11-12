@@ -1,7 +1,8 @@
 # Change log for Docker-cheatset
 
-- `cheatset` gem updated to version [1.4.4](https://rubygems.org/gems/cheatset/versions/1.4.4) via PR #18 from @holyjak
+## 0.5.0 2021-11-12 Maintenance release
 
+- `cheatset` gem updated to version [1.4.4](https://rubygems.org/gems/cheatset/versions/1.4.4) via PR #18 from @holyjak
 
 ## 0.4.0 2021-10-14 Maintenance release
 
