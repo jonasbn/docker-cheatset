@@ -1,5 +1,7 @@
 # Change log for Docker-cheatset
 
+- Bumped from Ruby 3.0.2-buster to 3.0.3-buster, via [PR](https://github.com/jonasbn/docker-cheatset/pull/19) from @dependabot
+
 ## 0.5.0 2021-11-12 Maintenance release
 
 - `cheatset` gem updated to version [1.4.4](https://rubygems.org/gems/cheatset/versions/1.4.4) via PR #18 from @holyjak
