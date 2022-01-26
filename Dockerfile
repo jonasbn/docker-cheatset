@@ -1,4 +1,4 @@
-FROM ruby:3.1.0-buster
+FROM ruby:3.1.0-bullseye
 
 COPY Gemfile .
 
