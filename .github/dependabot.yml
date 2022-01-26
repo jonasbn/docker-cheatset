@@ -13,10 +13,15 @@ updates:
     # Assign pull requests to an assignee
     assignees:
       - "jonasbn"
-  # Enable version updates for Actions
+  # Enable version updates for GitHub Actions
   - package-ecosystem: "github-actions"
     # Look for `.github/workflows` in the `root` directory
     directory: "/"
     # Check for updates once a week
+    schedule:
+      interval: "weekly"
+  # Maintain dependencies for Bundler (Ruby)
+  - package-ecosystem: "bundler"
+    directory: "/"
     schedule:
       interval: "weekly"
