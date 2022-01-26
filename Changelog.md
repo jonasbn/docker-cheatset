@@ -1,5 +1,7 @@
 # Change log for Docker-cheatset
 
+`cheatset` has been updated with a bug fix release: [1.4.5](https://rubygems.org/gems/cheatset/versions/1.4.5) for details please see the [GitHub repository](https://github.com/Kapeli/cheatset).
+
 ## 0.7.0 2022-01-04 Maintenance release
 
 - Bumped from Ruby 3.0.3-buster to 3.1.0-buster, via PR [#24](https://github.com/jonasbn/docker-cheatset/pull/24) from @dependabot
