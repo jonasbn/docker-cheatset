@@ -6,7 +6,7 @@
 
 Data from Snyk
 
-- ruby.3.1.0-buster (388 velnerabilities), by severity
+- ruby.3.1.0-buster (388 vulnerabilities), by severity
   - 6 critical
   - 42 high
   - 68 medium
@@ -27,7 +27,7 @@ Manual scan:
   - 35 medium
   - 132 low
 
-This does increase the number of crical issues, but it decreases the total of vulnerabilities.
+This does increase the number of critical issues, but it decreases the total of vulnerabilities.
 
 ## 0.7.0 2022-01-04 Maintenance release
 

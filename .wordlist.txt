@@ -21,3 +21,4 @@ Holý
 Jakub
 holyjak
 holyjak
+Snyk
