@@ -1,5 +1,6 @@
 # Change log for Docker-cheatset
 
+<<<<<<< HEAD
 ## 0.8.0 2022-01-26 Maintenance release
 
 - Changed Docker base image from from Ruby 3.1.0-buster to 3.1.0-bullseye. Meaning we are changing from Debian 10 to Debian 11. This aims to decrease the exposure to number of know vulnerabilities.
@@ -28,6 +29,9 @@ Manual scan:
   - 132 low
 
 This does increase the number of critical issues, but it decreases the total of vulnerabilities.
+=======
+`cheatset` has been updated with a bug fix release: [1.4.5](https://rubygems.org/gems/cheatset/versions/1.4.5) for details please see the [GitHub repository](https://github.com/Kapeli/cheatset).
+>>>>>>> master
 
 ## 0.7.0 2022-01-04 Maintenance release
 
