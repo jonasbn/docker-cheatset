@@ -136,6 +136,23 @@ Bumping to Ruby version 3 based base image, results in the following:
     from /usr/local/bundle/bin/cheatset:23:in `<main>'
 ```
 
+## Incompatibilities
+
+### Return status indicating success when unable to parse arguments
+
+`cheatset` uses the Ruby Gem [`thor`](https://rubygems.org/gems/thor) for command line argument parsing.
+
+`thor` returns `0` when not able to parse the provided arguments.
+
+There is hope that this might get addressed since `0` normally would indicate error. With the introduction of the warning from: `thor`.
+
+```text
+Deprecation warning: Thor exit with status 0 on errors. To keep this behavior, you must define `exit_on_failure?` in `Cheatset::CLI`
+You can silence deprecations warning by setting the environment variable THOR_SILENCE_DEPRECATION.
+```
+
+See also the related [issue on GitHub](https://github.com/rails/thor/issues/244).
+
 ## Diagnostics
 
 ### `ERROR: "cheatset generate" was called with no arguments`
@@ -154,6 +171,8 @@ You can silence deprecations warning by setting the environment variable THOR_SI
 ```bash
 docker run --rm  -it --volume $PWD:/tmp --name cheatset jonasbn/cheatset generate samble.rb
 ```
+
+See also the Incompatibilities section.
 
 ### `No such file or directory`
 
