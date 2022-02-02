@@ -4,7 +4,7 @@
 
 - `cheatset` has been updated with a bug fix release: [1.4.6](https://rubygems.org/gems/cheatset/versions/1.4.6) for details please see the [GitHub repository](https://github.com/Kapeli/cheatset) - thanks @dependabot
 
-- The Docker base image has been changed to a _slim_ variation, which minimizes the image size significantly
+- The Docker base image has been changed to a _slim_ variation, which reduces the image size significantly
 
 ## 0.8.0 2022-01-26 Maintenance release
 
