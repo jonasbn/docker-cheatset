@@ -2,7 +2,7 @@
 
 ## 0.10.0 2022-02-21 Maintenance release
 
-- Bumped from Ruby 3.1.0-buster to 3.1.1-buster, via PR [#32](https://github.com/jonasbn/docker-cheatset/pull/32) from @dependabot
+- Bumped from Ruby 3.1.0-slim-bullseye to 3.1.1-slim-bullseye, via PR [#32](https://github.com/jonasbn/docker-cheatset/pull/32) from @dependabot
 
 ## 0.9.0 2022-02-02 Maintenance release
 
