@@ -1,6 +1,6 @@
 # REF: https://docs.docker.com/engine/reference/builder/
 # REF: https://hub.docker.com/_/ruby
-FROM ruby:3.1.1-slim-bullseye
+FROM ruby:3.1.2-slim-bullseye
 
 # We point to the original repository for the image
 LABEL org.opencontainers.image.source https://github.com/jonasbn/docker-cheatset
