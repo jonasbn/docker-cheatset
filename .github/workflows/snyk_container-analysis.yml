@@ -14,7 +14,7 @@ jobs:
   snyk:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Build a Docker image
       run: docker build -t jonasbn/cheatset .
     - name: Run Snyk to check Docker image for vulnerabilities
@@ -31,6 +31,6 @@ jobs:
         image: jonasbn/cheatset
         args: --file=Dockerfile
     - name: Upload result to GitHub Code Scanning
-      uses: github/codeql-action/upload-sarif@v1
+      uses: github/codeql-action/upload-sarif@v2
       with:
         sarif_file: snyk.sarif
