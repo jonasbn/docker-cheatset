@@ -1,5 +1,7 @@
 # Docker encapsulation of cheatset
 
+[![Docker Pulls](https://img.shields.io/docker/pulls/jonasbn/cheatset.svg?style=flat)](https://hub.docker.com/r/jonasbn/cheatset/)
+
 `cheatset` ([GitHub][cheatsetgithub]) is a Ruby application for generating documentation sets (Docsets) for **[Dash.app][dashapp]**, primarily focused on cheat sheets.
 
 This repository is a Docker encapsulation for `cheatset` for those of us, who generate Docsets, but do not have a Ruby toolchain available or want the hassle of maintaining one.
