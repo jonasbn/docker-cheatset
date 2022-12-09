@@ -15,11 +15,11 @@ GEM
       temple (>= 0.8.0)
       tilt
     mini_portile2 (2.8.0)
-    nokogiri (1.13.9)
+    nokogiri (1.13.10)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     plist (3.6.0)
-    racc (1.6.0)
+    racc (1.6.1)
     redcarpet (3.5.1)
     rouge (3.27.0)
     sanitize (6.0.0)
