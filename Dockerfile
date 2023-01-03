@@ -8,7 +8,7 @@ LABEL org.opencontainers.image.source https://github.com/jonasbn/docker-cheatset
 # We need C compiler and related tools
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
-    apt-get -y install build-essential sqlite3 libsqlite3-dev && \
+    apt-get -y install build-essential sqlite3 libsqlite3-dev pkg-config && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
