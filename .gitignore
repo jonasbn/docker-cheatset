@@ -1,3 +1,4 @@
 Sample.docset
 dictionary.dic
 *.code-workspace
+.ruby-version
