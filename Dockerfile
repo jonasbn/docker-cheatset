@@ -13,6 +13,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 COPY Gemfile .
+COPY Gemfile.lock .
 
 RUN bundle install
 

@@ -1,8 +1,12 @@
 # Change log for Docker-cheatset
 
-## 0.12.0 2023-01-03 Maintenance release
+## 0.12.0 2023-01-04 Maintenance release
 
 - Bumped from Ruby 3.1.3-slim-bullseye to 3.2.0-slim-bullseye, via PR [#52](https://github.com/jonasbn/docker-cheatset/pull/52) from @dependabot
+
+- Added `Gemfile.lock` to Docker image generation
+
+- Bumped Bundler version in `Gemfile.lock`
 
 ## 0.11.0 2022-12-03 Maintenance release
 
