@@ -65,7 +65,7 @@ Generates cheat sheet out of a file
 Now lets generate something:
 
 ```bash
-docker run --rm  -it --volume $PWD:/tmp --name cheatset jonasbn/cheatset generate samble.rb
+docker run --rm  -it --volume $PWD:/tmp --name cheatset jonasbn/cheatset generate sample.rb
 ```
 
 And in our directory a `Sample.docset` directory appears.
@@ -171,7 +171,7 @@ You can silence deprecations warning by setting the environment variable THOR_SI
 1. You have to specify a Docset file (Ruby), eg. `sample.rb`
 
 ```bash
-docker run --rm  -it --volume $PWD:/tmp --name cheatset jonasbn/cheatset generate samble.rb
+docker run --rm  -it --volume $PWD:/tmp --name cheatset jonasbn/cheatset generate sample.rb
 ```
 
 See also the Incompatibilities section.
@@ -197,7 +197,7 @@ Traceback (most recent call last):
 1. You have to work directly in the directory containing the Docset file
 
 ```bash
-docker run --rm  -it --volume $PWD:/tmp --name cheatset jonasbn/cheatset generate samble.rb
+docker run --rm  -it --volume $PWD:/tmp --name cheatset jonasbn/cheatset generate sample.rb
 ```
 
 You can _possibly_ adjust the Docker invocation accordingly.
