@@ -8,6 +8,8 @@
 
 - Bumped Bundler version in `Gemfile.lock`
 
+- Renamed example file from `samble.rb` to `sample.rb`, thanks to @suredream who patched cheatset via PR [#39](https://github.com/Kapeli/cheatset/pull/39), I believe I am the one who introduced this spelling error, both in my own repository and in the cheatset repository
+
 ## 0.11.0 2022-12-03 Maintenance release
 
 - Bumped from Ruby 3.1.2-slim-bullseye to 3.1.3-slim-bullseye, via PR [#49](https://github.com/jonasbn/docker-cheatset/pull/49) from @dependabot
