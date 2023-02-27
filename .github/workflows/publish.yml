@@ -10,7 +10,7 @@ on:
     - master
 
 jobs:
-  multi-registries:
+  dockerhub-publish:
     runs-on: ubuntu-latest
     steps:
       -
@@ -39,7 +39,7 @@ jobs:
             jonasbn/ebirah:latest
       - 
         name: Docker Hub Description
-        uses: peter-evans/dockerhub-description@v3.1.2
+        uses: peter-evans/dockerhub-description@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
