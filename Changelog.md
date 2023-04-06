@@ -1,5 +1,9 @@
 # Change log for Docker-cheatset
 
+## 0.14.0 UNRELEASED Maintenance release
+
+- Bumped from Ruby 3.2.1-slim-bullseye to 3.2.2-slim-bullseye, via PR [#56](https://github.com/jonasbn/docker-cheatset/pull/56) from @dependabot
+
 ## 0.13.0 2023-04-06 Maintenance release
 
 - Bumped from Ruby 3.2.0-slim-bullseye to 3.2.1-slim-bullseye, via PR [#56](https://github.com/jonasbn/docker-cheatset/pull/56) from @dependabot
