@@ -15,7 +15,7 @@ GEM
       temple (>= 0.8.0)
       tilt
     mini_portile2 (2.8.1)
-    nokogiri (1.14.0)
+    nokogiri (1.14.3)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     plist (3.6.0)
