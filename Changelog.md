@@ -2,7 +2,7 @@
 
 ## 0.15.0 2023-07-10 Maintenance release
 
-- Bumped dependencies: 
+- Bumped dependencies:
   - sanitize from version 6.0.1 to 6.0.2
   - nokogiri to 1.15.3
   - racc to 1.7.1
