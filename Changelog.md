@@ -1,5 +1,16 @@
 # Change log for Docker-cheatset
 
+## 0.15.0 2023-07-10 Maintenance release
+
+- Bumped dependencies: 
+  - sanitize from version 6.0.1 to 6.0.2
+  - nokogiri to 1.15.3
+  - racc to 1.7.1
+  - mini_portile2 to 2.8.2
+  - All via PR [#63](https://github.com/jonasbn/docker-cheatset/pull/63) from @dependabot
+
+- Bumped dependency: nokogiri from version 1.14.0 to 1.14.3, via PR [#60](https://github.com/jonasbn/docker-cheatset/pull/60) from @dependabot
+
 ## 0.14.0 2023-04-07 Maintenance release
 
 - Bumped from Ruby 3.2.1-slim-bullseye to 3.2.2-slim-bullseye, via PR [#59](https://github.com/jonasbn/docker-cheatset/pull/59) from @dependabot
