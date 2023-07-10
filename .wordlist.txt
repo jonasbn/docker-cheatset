@@ -24,3 +24,6 @@ holyjak
 Snyk
 Bundler
 suredream
+nokogiri
+racc
+portile
