@@ -2,5 +2,5 @@
 
 source "https://rubygems.org"
 
-gem "cheatset", "1.4.8"
+gem 'cheatset', '~> 1.4', '= 1.4.6'
 
