@@ -36,7 +36,7 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            jonasbn/ebirah:latest
+            jonasbn/cheatset:latest
       - 
         name: Docker Hub Description
         uses: peter-evans/dockerhub-description@v3
