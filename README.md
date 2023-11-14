@@ -174,6 +174,8 @@ You can _possibly_ adjust the Docker invocation accordingly.
 
 ## Acknowledgements
 
+- Jun Xiong (@suredream), indirect contributor
+
 - Jakub Holý (@holyjak), contributor
 
 - Bogdan Popescu (@kapeli), author of `cheatset` and **Dash.app**
