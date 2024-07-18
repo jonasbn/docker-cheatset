@@ -30,8 +30,8 @@ The master branch might contain changes not tagged as released yet and can be re
 The prebuilt `cheatset` Docker image is [available on DockerHub][dockerhubcheatset], or you can build it yourself based on this repository, see the section below on building.
 
 ```bash
-$ docker pull jonasbn/cheatset:0.15.0
-$ docker run --rm --volume $PWD:/tmp jonasbn/cheatset:0.15.0
+$ docker pull jonasbn/cheatset:0.16.0
+$ docker run --rm --volume $PWD:/tmp jonasbn/cheatset:0.16.0
 ```
 
 And if you are want the latest build:
