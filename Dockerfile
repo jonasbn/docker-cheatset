@@ -3,7 +3,9 @@
 FROM ruby:3.2.2-slim-bullseye
 
 # We point to the original repository for the image
-LABEL org.opencontainers.image.source https://github.com/jonasbn/docker-cheatset
+LABEL org.opencontainers.image.source=https://github.com/jonasbn/docker-cheatset
+
+WORKDIR /usr/src/app
 
 # We need C compiler and related tools
 ENV DEBIAN_FRONTEND=noninteractive
@@ -15,8 +17,9 @@ RUN apt-get update && \
 COPY Gemfile .
 COPY Gemfile.lock .
 
+RUN bundle config set --local system 'true'
 RUN bundle install
 
 WORKDIR /tmp
 
-ENTRYPOINT [ "cheatset" ]
+ENTRYPOINT [ "/usr/local/bundle/bin/cheatset" ]
