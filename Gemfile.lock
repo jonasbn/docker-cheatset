@@ -11,9 +11,8 @@ GEM
       thor
       unindent
     crass (1.0.6)
-    haml (6.2.3)
-      temple (>= 0.8.2)
-      thor
+    haml (5.2.2)
+      temple (>= 0.8.0)
       tilt
     mini_portile2 (2.8.2)
     nokogiri (1.16.5-aarch64-linux)
