@@ -4,6 +4,13 @@ FROM ruby:3.2.8-slim-bookworm@sha256:b42a6ec7c24b0105241429d41cab49c5d6d57e5b0df
 
 # We point to the original repository for the image
 LABEL org.opencontainers.image.source=https://github.com/jonasbn/docker-cheatset
+LABEL org.opencontainers.image.title="cheatset"
+LABEL org.opencontainers.image.description="Docker encapsulation of the cheatset command for generating Docsets for the Dash.app "
+LABEL org.opencontainers.image.authors="jonasbn"
+LABEL org.opencontainers.image.licenses="MIT"
+LABEL org.opencontainers.image.url="https://github.com/jonasbn/docker-cheatset"
+LABEL org.opencontainers.image.documentation="https://github.com/jonasbn/docker-cheatset#readme"
+LABEL org.opencontainers.image.created="2025-05-21T12:00:00Z"
 
 WORKDIR /usr/src/app
 
