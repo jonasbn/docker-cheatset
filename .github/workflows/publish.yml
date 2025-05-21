@@ -45,7 +45,9 @@ jobs:
         id: meta
         uses: docker/metadata-action@902fa8ec7d6ecbf8d84d538b9b233a880e428804 # ratchet:docker/metadata-action@v5
         with:
-          images: ghcr.io/${{ github.repository }}
+          images: |
+            ghcr.io/${{ github.repository }}
+            docker.io/jonasbn/cheatset
           tags: |
             type=sha
             type=ref,event=branch
