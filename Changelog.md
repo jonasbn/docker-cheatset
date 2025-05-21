@@ -1,5 +1,15 @@
 # Change log for Docker-cheatset
 
+## 0.18.0 2025-05-21 Feature/maintenance release
+
+- Bumped Docker base image from Ruby 3.2.6-slim-bullseye to 3.2.8-slim-bookworm
+
+- Pinned Docker base image
+
+- Pinned GitHub Actions
+
+- Added build of arm64 architecture/platform as requested by @kspeeckaert via issue [#123](https://github.com/jonasbn/docker-cheatset/issues/123)
+
 ## 0.17.0 2024-11-10 Maintenance release
 
 - Bumped Docker base image from Ruby 3.2.3-slim-bullseye to 3.2.6-slim-bullseye, via PR [#108](https://github.com/jonasbn/docker-cheatset/pull/108) from @jonasbn
