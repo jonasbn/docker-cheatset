@@ -1,5 +1,11 @@
 # Change log for Docker-cheatset
 
+## 0.19.0 2025-05-21 maintenance release
+
+- Improved management of the Docker image and enabled pushing to GitHub Container Registry (GHCR) via GitHub Actions
+
+- Added some more meta-data to the Dockerfile
+
 ## 0.18.0 2025-05-21 Feature/maintenance release
 
 - Bumped Docker base image from Ruby 3.2.6-slim-bullseye to 3.2.8-slim-bookworm
