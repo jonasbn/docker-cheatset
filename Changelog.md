@@ -1,5 +1,9 @@
 # Change log for Docker-cheatset
 
+## 0.20.0 2025-05-21 maintenance release
+
+- Minor adjustments to build process for publishing to GitHub Container Registry (GHCR) and DockerHub via GitHub Actions
+
 ## 0.19.0 2025-05-21 maintenance release
 
 - Improved management of the Docker image and enabled pushing to GitHub Container Registry (GHCR) via GitHub Actions
