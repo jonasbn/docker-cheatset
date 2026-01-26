@@ -6,7 +6,7 @@ jobs:
     name: Markdownlint
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v6.0.1
+    - uses: actions/checkout@v6.0.2
     - uses: nosborn/github-action-markdown-cli@v3.5.0
       name: Markdownlint
       with:
