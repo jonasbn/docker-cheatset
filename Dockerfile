@@ -1,6 +1,6 @@
 # REF: https://docs.docker.com/engine/reference/builder/
 # REF: https://hub.docker.com/_/ruby
-FROM ruby:3.2.8-slim-bookworm@sha256:b42a6ec7c24b0105241429d41cab49c5d6d57e5b0df8c86cdf54cc405b9c3c79
+FROM ruby:3.2.8-slim-bookworm@sha256:2db494c4e5cb76923cf40878b79ec1d03adbe28de43898178a42d70a7492f945
 
 # We point to the original repository for the image
 LABEL org.opencontainers.image.source=https://github.com/jonasbn/docker-cheatset
