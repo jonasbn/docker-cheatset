@@ -1,5 +1,9 @@
 # Change log for Docker-cheatset
 
+## 0.21.0 2025-06-10 maintenance release
+
+- Bumped Docker base image for Ruby 3.2.8-slim-bookworm, via PR [#161](https://github.com/jonasbn/docker-cheatset/pull/161) from @dependabot
+
 ## 0.20.0 2025-05-21 maintenance release
 
 - Minor adjustments to build process for publishing to GitHub Container Registry (GHCR) and DockerHub via GitHub Actions
