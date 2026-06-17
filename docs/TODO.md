@@ -4,7 +4,7 @@
 
 `Gemfile.lock` carries `BUNDLED WITH 2.4.20`, which predates the Bundler version
 that ships with Ruby 4.0's gem ecosystem. No failure has been observed yet, but if a
-future build step raises a Bundler version mismatch warning this is the first place to
+future build step raises a Bundler version mismatch warning, this is the first place to
 look. Regenerate `Gemfile.lock` with the Bundler version included in the Ruby 4.0 image
 to eliminate the discrepancy.
 
