@@ -41,10 +41,10 @@ teardown() {
     [[ "$output" == *"generate"* ]]
 }
 
-@test "cheatset gem is version 1.4.6" {
+@test "cheatset gem is version 1.5.0" {
     run docker run --rm --entrypoint /bin/sh "$IMAGE_NAME" -c "gem list cheatset --local"
     [ "$status" -eq 0 ]
-    [[ "$output" == *"1.4.6"* ]]
+    [[ "$output" == *"1.5.0"* ]]
 }
 
 # ---------------------------------------------------------------------------
