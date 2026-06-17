@@ -12,7 +12,7 @@ setup_file() {
     export SHARED_TMPDIR
     SHARED_TMPDIR=$(mktemp -d)
     cp "$BATS_TEST_DIRNAME/fixtures/sample.rb" "$SHARED_TMPDIR/"
-    docker run --rm -v "$SHARED_TMPDIR":/tmp "$IMAGE_NAME" generate sample.rb
+    docker run --rm --user "$(id -u):$(id -g)" -v "$SHARED_TMPDIR":/tmp "$IMAGE_NAME" generate sample.rb
 }
 
 teardown_file() {
@@ -41,8 +41,8 @@ teardown() {
     [[ "$output" == *"generate"* ]]
 }
 
-@test "cheatset version outputs 1.4.6" {
-    run docker run --rm "$IMAGE_NAME" version
+@test "cheatset gem is version 1.4.6" {
+    run docker run --rm --entrypoint /bin/sh "$IMAGE_NAME" -c "gem list cheatset --local"
     [ "$status" -eq 0 ]
     [[ "$output" == *"1.4.6"* ]]
 }
@@ -53,7 +53,7 @@ teardown() {
 
 @test "generate exits 0" {
     cp "$BATS_TEST_DIRNAME/fixtures/sample.rb" "$TMPDIR/"
-    run docker run --rm -v "$TMPDIR":/tmp "$IMAGE_NAME" generate sample.rb
+    run docker run --rm --user "$(id -u):$(id -g)" -v "$TMPDIR":/tmp "$IMAGE_NAME" generate sample.rb
     [ "$status" -eq 0 ]
 }
 
