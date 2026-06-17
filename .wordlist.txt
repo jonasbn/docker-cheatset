@@ -31,3 +31,15 @@ toolchain
 kspeeckaert
 GHCR
 Dockerfile
+DSL
+EditorConfig
+SHA
+SHAs
+UTF
+ai
+claude
+codebase
+entrypoint
+md
+semver
+sqlite
