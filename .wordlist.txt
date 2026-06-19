@@ -43,3 +43,7 @@ entrypoint
 md
 semver
 sqlite
+Haml
+html
+Gemfile
+haml
