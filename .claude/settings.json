@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "file=$(cat | jq -r '.file_path // empty'); [[ \"$file\" == *.md ]] && markdownlint --config .markdownlint.json \"$file\" || true"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "file=$(cat | jq -r '.file_path // empty'); [[ \"$file\" == *Gemfile.lock ]] && echo 'Gemfile.lock is managed by Bundler/Dependabot — edit Gemfile instead' >&2 && exit 2 || true"
+          }
+        ]
+      }
+    ]
+  }
+}

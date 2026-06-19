@@ -2,3 +2,5 @@ Sample.docset
 dictionary.dic
 *.code-workspace
 .ruby-version
+.mcp.json
+.claude/settings.local.json
