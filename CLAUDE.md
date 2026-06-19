@@ -28,6 +28,21 @@ The container mounts `$PWD` to `/tmp` (the container's working directory), so th
 npx markdownlint-cli2 "**/*.md" --config .markdownlint.json
 ```
 
+### Regenerate Gemfile.lock
+
+If Ruby is available locally:
+
+```bash
+bundle lock
+```
+
+Without a local Ruby toolchain, use the same base image as the Dockerfile:
+
+```bash
+docker run --rm --volume "$PWD":/app -w /app ruby:4.0.5-slim-trixie \
+  bash -c "gem install bundler && bundle lock"
+```
+
 ### Run spellcheck locally
 
 ```bash
@@ -42,9 +57,9 @@ New technical terms that fail spellcheck should be added to `.wordlist.txt`.
 
 The project has three components:
 
-1. **`Dockerfile`** — Builds from `ruby:3.2.10-slim-trixie` (pinned by SHA digest). Installs `build-essential`, `sqlite3`, and `libsqlite3-dev` because `cheatset`'s dependencies (nokogiri, sqlite3 gem) require C compilation. Sets `WORKDIR /tmp` so that mounted volumes at `/tmp` serve as the working directory. The entrypoint is `/usr/local/bundle/bin/cheatset`.
+1. **`Dockerfile`** — Builds from `ruby:4.0.5-slim-trixie` (pinned by SHA digest). Installs `build-essential`, `sqlite3`, and `libsqlite3-dev` because `cheatset`'s dependencies (nokogiri, sqlite3 gem) require C compilation. Sets `WORKDIR /tmp` so that mounted volumes at `/tmp` serve as the working directory. The entrypoint is `/usr/local/bundle/bin/cheatset`.
 
-2. **`Gemfile` / `Gemfile.lock`** — Pin `cheatset` to an exact version (`1.4.6`). Both files are copied into the image and `Gemfile.lock` is used for reproducible builds (`bundle config set --local system 'true'` installs gems system-wide rather than into a bundle path).
+2. **`Gemfile` / `Gemfile.lock`** — Pin `cheatset` to an exact version (`1.5.0`). `haml` is additionally pinned to `~> 5.2` to work around a rendering regression in `cheatset` 1.5.0 with haml 6+ (see `docs/TODO.md`). Both files are copied into the image and `Gemfile.lock` is used for reproducible builds (`bundle config set --local system 'true'` installs gems system-wide rather than into a bundle path).
 
 3. **`sample.rb`** — A working example of the cheatset DSL. It demonstrates the structure of a docset file: `cheatsheet do` block containing `category do` blocks with `entry do` blocks.
 

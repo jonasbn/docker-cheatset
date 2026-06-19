@@ -1,5 +1,35 @@
 # Change log for Docker-cheatset
 
+## 0.23.0 2026-06-19 maintenance release
+
+- Bumped Docker base image from `ruby:3.2.10-slim-trixie` to `ruby:4.0.5-slim-trixie`, via PR [#182](https://github.com/jonasbn/docker-cheatset/pull/182) from @dependabot
+
+- Bumped `cheatset` gem from `1.4.6` to `1.5.0`, via PR [#192](https://github.com/jonasbn/docker-cheatset/pull/192)
+
+- Pinned `haml` to `~> 5.2` as a workaround for a regression introduced in `cheatset` 1.5.0: the new Haml compatibility shim does not pass `escape_html: false` to the Haml 6+ API, causing HTML in docset entries (notes, html\_notes, introduction) to render as visible literal text in Dash instead of formatted HTML. An upstream report is tracked in `docs/TODO.md`
+
+- Added BATS testing strategy for the Docker image, via PR [#191](https://github.com/jonasbn/docker-cheatset/pull/191)
+
+- Fixed CI failures introduced by the Ruby 4.0 upgrade, via PR [#193](https://github.com/jonasbn/docker-cheatset/pull/193)
+
+- Added `CLAUDE.md` with codebase guidance for AI assistants
+
+- Bumped `nokogiri` from `1.18.9` to `1.19.3`, via PR [#167](https://github.com/jonasbn/docker-cheatset/pull/167) and [#180](https://github.com/jonasbn/docker-cheatset/pull/180) from @dependabot
+
+- Bumped `actions/checkout` from `6.0.2` to `6.0.3`, via PR [#188](https://github.com/jonasbn/docker-cheatset/pull/188) from @dependabot
+
+- Bumped `docker/build-push-action` from `6.18.0` to `7.2.0`, via PR [#166](https://github.com/jonasbn/docker-cheatset/pull/166), [#174](https://github.com/jonasbn/docker-cheatset/pull/174), [#178](https://github.com/jonasbn/docker-cheatset/pull/178), [#183](https://github.com/jonasbn/docker-cheatset/pull/183) from @dependabot
+
+- Bumped `docker/login-action` from `3.7.0` to `4.2.0`, via PR [#172](https://github.com/jonasbn/docker-cheatset/pull/172), [#177](https://github.com/jonasbn/docker-cheatset/pull/177), [#184](https://github.com/jonasbn/docker-cheatset/pull/184) from @dependabot
+
+- Bumped `docker/metadata-action` from `5.10.0` to `6.1.0`, via PR [#170](https://github.com/jonasbn/docker-cheatset/pull/170), [#186](https://github.com/jonasbn/docker-cheatset/pull/186) from @dependabot
+
+- Bumped `docker/setup-buildx-action` from `3.12.0` to `4.1.0`, via PR [#171](https://github.com/jonasbn/docker-cheatset/pull/171), [#185](https://github.com/jonasbn/docker-cheatset/pull/185) from @dependabot
+
+- Bumped `docker/setup-qemu-action` from `3.7.0` to `4.1.0`, via PR [#173](https://github.com/jonasbn/docker-cheatset/pull/173), [#187](https://github.com/jonasbn/docker-cheatset/pull/187) from @dependabot
+
+- Bumped `rojopolis/spellcheck-github-actions` from `0.58.0` to `0.61.0`, via PR [#169](https://github.com/jonasbn/docker-cheatset/pull/169), [#175](https://github.com/jonasbn/docker-cheatset/pull/175), [#189](https://github.com/jonasbn/docker-cheatset/pull/189) from @dependabot
+
 ## 0.22.0 2026-02-10 maintenance release
 
 - Bumped Docker base image to: `ruby:3.2.10-slim-trixie`
