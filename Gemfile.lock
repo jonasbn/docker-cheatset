@@ -11,8 +11,9 @@ GEM
       thor (>= 1.0.1)
       unindent (>= 1.0)
     crass (1.0.6)
-    haml (5.2.2)
-      temple (>= 0.8.0)
+    haml (7.2.0)
+      temple (>= 0.8.2)
+      thor
       tilt
     nokogiri (1.19.4-aarch64-linux-gnu)
       racc (~> 1.4)
@@ -45,7 +46,7 @@ PLATFORMS
 
 DEPENDENCIES
   cheatset (= 1.5.0)
-  haml (~> 5.2)
+  haml (~> 7.2)
 
 BUNDLED WITH
   4.0.14
