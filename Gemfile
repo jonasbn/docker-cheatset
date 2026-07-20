@@ -9,5 +9,5 @@ gem 'cheatset', '1.5.0'
 # and rendered as visible literal text in Dash. cheatset 1.5.0's render_haml shim
 # does not pass escape_html: false to the new Haml::Template API.
 # Remove this pin once the upstream fix lands in Kapeli/cheatset.
-gem 'haml', '~> 5.2'
+gem 'haml', '~> 6.4'
 
