@@ -65,11 +65,13 @@ The project has three components:
 
 ## CI/CD
 
-Three GitHub Actions workflows run on push:
+GitHub Actions workflows run on push (and pull request where noted):
 
 - **`publish.yml`** — Builds and pushes multi-arch images (`linux/amd64`, `linux/arm64`) to both DockerHub (`jonasbn/cheatset`) and GHCR (`ghcr.io/jonasbn/docker-cheatset`). Tags include `latest`, branch name, commit SHA, and semver tags. Requires `DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN` secrets.
 - **`markdownlint.yml`** — Lints all `.md` files against `.markdownlint.json`.
 - **`spellcheck.yml`** — Spellchecks all `.md` files using `pyspelling` + `aspell` (English), skipping content inside `<code>` and `<pre>` blocks.
+- **`test.yml`** — Builds the Docker image and runs the `bats` test suite in `tests/` against it. Runs on push to `master`/`claude/**` and on pull requests targeting `master`.
+- **`zizmor.yml`** — Runs [`zizmor`](https://docs.zizmor.sh/) (via `zizmorcore/zizmor-action`) to statically audit this repo's own GitHub Actions workflows for security issues, uploading results to GitHub Advanced Security code scanning. Runs on push to `master`/`claude/**` and on pull requests targeting `master`.
 
 ## Conventions
 

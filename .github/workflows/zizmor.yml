@@ -1,0 +1,35 @@
+# REF: https://github.com/zizmorcore/zizmor-action
+
+name: Zizmor Action
+
+on:
+  push:
+    branches:
+      - master
+      - "claude/**"
+  pull_request:
+    branches:
+      - master
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions: {}
+
+jobs:
+  zizmor:
+    name: Zizmor
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write # required to upload SARIF results to code scanning
+      contents: read # required to checkout the repository
+      actions: read # required by zizmor-action to inspect workflow run context
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Run zizmor
+        uses: zizmorcore/zizmor-action@6fc4b006235f201fdab3722e17240ab420d580e5 # v0.6.1

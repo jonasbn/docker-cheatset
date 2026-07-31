@@ -4,22 +4,31 @@ name: Publish to DockerHub
 
 on:
   push:
-    branches: 
+    branches:
     - master
     tags:
       - "*"
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
 permissions:
-  contents: read
-  packages: write
+  contents: read # required to checkout the repository
 
 jobs:
   dockerhub-publish:
+    name: Publish to DockerHub and GHCR
     runs-on: ubuntu-latest
+    environment: dockerhub-release
+    permissions:
+      packages: write # required to push images to GHCR
     steps:
       -
         name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@96fe6ef7f33517b61c61be40b68a1882f3264fb8 # v4.2.0
