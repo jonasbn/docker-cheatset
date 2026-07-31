@@ -1,5 +1,10 @@
 name: Spellcheck Action
-on: push
+on:
+  push:
+    paths:
+      - "**/*.md"
+      - ".spellcheck.yml"
+      - ".wordlist.txt"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
