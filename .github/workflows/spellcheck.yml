@@ -5,6 +5,9 @@ on:
       - "**/*.md"
       - ".spellcheck.yml"
       - ".wordlist.txt"
+    paths-ignore:
+      - "CLAUDE.md"
+      - ".claude/**"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
