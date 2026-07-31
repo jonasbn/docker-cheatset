@@ -47,3 +47,5 @@ Haml
 html
 Gemfile
 haml
+config
+wordlist
