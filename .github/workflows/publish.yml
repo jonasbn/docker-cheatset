@@ -4,18 +4,25 @@ name: Publish to DockerHub
 
 on:
   push:
-    branches: 
+    branches:
     - master
     tags:
       - "*"
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
 permissions:
-  contents: read
-  packages: write
+  contents: read # required to checkout the repository
 
 jobs:
   dockerhub-publish:
+    name: Publish to DockerHub and GHCR
     runs-on: ubuntu-latest
+    environment: dockerhub-release
+    permissions:
+      packages: write # required to push images to GHCR
     steps:
       -
         name: Checkout
