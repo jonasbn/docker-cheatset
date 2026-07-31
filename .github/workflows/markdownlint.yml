@@ -5,6 +5,7 @@ on:
       - "**/*.md"
       - ".markdownlintignore"
       - ".markdownlint.json"
+      - ".github/workflows/markdownlint.yml"
     paths-ignore:
       - "CLAUDE.md"
       - ".claude/**"

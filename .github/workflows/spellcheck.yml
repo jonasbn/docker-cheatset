@@ -5,6 +5,7 @@ on:
       - "**/*.md"
       - ".spellcheck.yml"
       - ".wordlist.txt"
+      - ".github/workflows/spellcheck.yml"
     paths-ignore:
       - "CLAUDE.md"
       - ".claude/**"
