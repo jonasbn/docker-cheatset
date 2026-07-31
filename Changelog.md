@@ -1,8 +1,8 @@
 # Change log for Docker-cheatset
 
-## 0.23.0 2026-06-19 maintenance release
+## 0.23.0 2026-07-31 maintenance release
 
-- Bumped Docker base image from `ruby:3.2.10-slim-trixie` to `ruby:4.0.5-slim-trixie`, via PR [#182](https://github.com/jonasbn/docker-cheatset/pull/182) from @dependabot
+- Bumped Docker base image from `ruby:3.2.10-slim-trixie` to `ruby:4.0.6-slim-trixie`, via PR [#182](https://github.com/jonasbn/docker-cheatset/pull/182), [#206](https://github.com/jonasbn/docker-cheatset/pull/206) from @dependabot
 
 - Bumped `cheatset` gem from `1.4.6` to `1.5.0`, via PR [#192](https://github.com/jonasbn/docker-cheatset/pull/192)
 
@@ -14,21 +14,25 @@
 
 - Added `CLAUDE.md` with codebase guidance for AI assistants
 
-- Bumped `nokogiri` from `1.18.9` to `1.19.3`, via PR [#167](https://github.com/jonasbn/docker-cheatset/pull/167) and [#180](https://github.com/jonasbn/docker-cheatset/pull/180) from @dependabot
+- Added a `zizmor` GitHub Actions workflow to statically audit this repository's own workflows for security issues, and hardened all workflows accordingly: added `concurrency` groups, scoped `publish.yml`'s `packages: write` permission to job level, moved the DockerHub/GHCR publish job behind a dedicated `dockerhub-release` environment so `DOCKERHUB_USERNAME`/`DOCKERHUB_TOKEN` are environment-scoped rather than plain repository secrets, and documented/named previously anonymous permissions and jobs, via PR [#209](https://github.com/jonasbn/docker-cheatset/pull/209)
 
-- Bumped `actions/checkout` from `6.0.2` to `6.0.3`, via PR [#188](https://github.com/jonasbn/docker-cheatset/pull/188) from @dependabot
+- Scoped `markdownlint.yml` and `spellcheck.yml` to only trigger on relevant file changes (Markdown files and their respective config/wordlist files, including the workflow files themselves), and added `.markdownlintignore` to exclude auto-generated Claude-related files (`CLAUDE.md`, `.claude/`) from linting, via PR [#210](https://github.com/jonasbn/docker-cheatset/pull/210), [#211](https://github.com/jonasbn/docker-cheatset/pull/211), [#212](https://github.com/jonasbn/docker-cheatset/pull/212)
 
-- Bumped `docker/build-push-action` from `6.18.0` to `7.2.0`, via PR [#166](https://github.com/jonasbn/docker-cheatset/pull/166), [#174](https://github.com/jonasbn/docker-cheatset/pull/174), [#178](https://github.com/jonasbn/docker-cheatset/pull/178), [#183](https://github.com/jonasbn/docker-cheatset/pull/183) from @dependabot
+- Bumped `nokogiri` from `1.18.9` to `1.19.4`, via PR [#167](https://github.com/jonasbn/docker-cheatset/pull/167), [#180](https://github.com/jonasbn/docker-cheatset/pull/180), [#197](https://github.com/jonasbn/docker-cheatset/pull/197) from @dependabot
 
-- Bumped `docker/login-action` from `3.7.0` to `4.2.0`, via PR [#172](https://github.com/jonasbn/docker-cheatset/pull/172), [#177](https://github.com/jonasbn/docker-cheatset/pull/177), [#184](https://github.com/jonasbn/docker-cheatset/pull/184) from @dependabot
+- Bumped `actions/checkout` from `6.0.2` to `7.0.1`, via PR [#188](https://github.com/jonasbn/docker-cheatset/pull/188), [#194](https://github.com/jonasbn/docker-cheatset/pull/194), [#207](https://github.com/jonasbn/docker-cheatset/pull/207) from @dependabot
 
-- Bumped `docker/metadata-action` from `5.10.0` to `6.1.0`, via PR [#170](https://github.com/jonasbn/docker-cheatset/pull/170), [#186](https://github.com/jonasbn/docker-cheatset/pull/186) from @dependabot
+- Bumped `docker/build-push-action` from `6.18.0` to `7.3.0`, via PR [#166](https://github.com/jonasbn/docker-cheatset/pull/166), [#174](https://github.com/jonasbn/docker-cheatset/pull/174), [#178](https://github.com/jonasbn/docker-cheatset/pull/178), [#183](https://github.com/jonasbn/docker-cheatset/pull/183), [#204](https://github.com/jonasbn/docker-cheatset/pull/204) from @dependabot
 
-- Bumped `docker/setup-buildx-action` from `3.12.0` to `4.1.0`, via PR [#171](https://github.com/jonasbn/docker-cheatset/pull/171), [#185](https://github.com/jonasbn/docker-cheatset/pull/185) from @dependabot
+- Bumped `docker/login-action` from `3.7.0` to `4.5.2`, via PR [#172](https://github.com/jonasbn/docker-cheatset/pull/172), [#177](https://github.com/jonasbn/docker-cheatset/pull/177), [#184](https://github.com/jonasbn/docker-cheatset/pull/184), [#203](https://github.com/jonasbn/docker-cheatset/pull/203), [#208](https://github.com/jonasbn/docker-cheatset/pull/208) from @dependabot
 
-- Bumped `docker/setup-qemu-action` from `3.7.0` to `4.1.0`, via PR [#173](https://github.com/jonasbn/docker-cheatset/pull/173), [#187](https://github.com/jonasbn/docker-cheatset/pull/187) from @dependabot
+- Bumped `docker/metadata-action` from `5.10.0` to `6.2.0`, via PR [#170](https://github.com/jonasbn/docker-cheatset/pull/170), [#186](https://github.com/jonasbn/docker-cheatset/pull/186), [#201](https://github.com/jonasbn/docker-cheatset/pull/201) from @dependabot
 
-- Bumped `rojopolis/spellcheck-github-actions` from `0.58.0` to `0.61.0`, via PR [#169](https://github.com/jonasbn/docker-cheatset/pull/169), [#175](https://github.com/jonasbn/docker-cheatset/pull/175), [#189](https://github.com/jonasbn/docker-cheatset/pull/189) from @dependabot
+- Bumped `docker/setup-buildx-action` from `3.12.0` to `4.2.0`, via PR [#171](https://github.com/jonasbn/docker-cheatset/pull/171), [#185](https://github.com/jonasbn/docker-cheatset/pull/185), [#202](https://github.com/jonasbn/docker-cheatset/pull/202) from @dependabot
+
+- Bumped `docker/setup-qemu-action` from `3.7.0` to `4.2.0`, via PR [#173](https://github.com/jonasbn/docker-cheatset/pull/173), [#187](https://github.com/jonasbn/docker-cheatset/pull/187), [#205](https://github.com/jonasbn/docker-cheatset/pull/205) from @dependabot
+
+- Bumped `rojopolis/spellcheck-github-actions` from `0.58.0` to `0.63.0`, via PR [#169](https://github.com/jonasbn/docker-cheatset/pull/169), [#175](https://github.com/jonasbn/docker-cheatset/pull/175), [#189](https://github.com/jonasbn/docker-cheatset/pull/189), [#195](https://github.com/jonasbn/docker-cheatset/pull/195), [#200](https://github.com/jonasbn/docker-cheatset/pull/200) from @dependabot
 
 ## 0.22.0 2026-02-10 maintenance release
 
