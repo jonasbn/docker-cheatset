@@ -6,9 +6,6 @@ on:
       - ".markdownlintignore"
       - ".markdownlint.json"
       - ".github/workflows/markdownlint.yml"
-    paths-ignore:
-      - "CLAUDE.md"
-      - ".claude/**"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
