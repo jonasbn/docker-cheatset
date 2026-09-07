@@ -36,10 +36,12 @@ If Ruby is available locally:
 bundle lock
 ```
 
-Without a local Ruby toolchain, use the same base image as the Dockerfile:
+Without a local Ruby toolchain, use the same base image as the Dockerfile
+(the command below reads the pinned tag straight from the `FROM` line, so it
+always matches):
 
 ```bash
-docker run --rm --volume "$PWD":/app -w /app ruby:4.0.5-slim-trixie \
+docker run --rm --volume "$PWD":/app -w /app "$(sed -n 's/^FROM //p' Dockerfile)" \
   bash -c "gem install bundler && bundle lock"
 ```
 
@@ -57,7 +59,7 @@ New technical terms that fail spellcheck should be added to `.wordlist.txt`.
 
 The project has three components:
 
-1. **`Dockerfile`** — Builds from `ruby:4.0.5-slim-trixie` (pinned by SHA digest). Installs `build-essential`, `sqlite3`, and `libsqlite3-dev` because `cheatset`'s dependencies (nokogiri, sqlite3 gem) require C compilation. Sets `WORKDIR /tmp` so that mounted volumes at `/tmp` serve as the working directory. The entrypoint is `/usr/local/bundle/bin/cheatset`.
+1. **`Dockerfile`** — Builds from a `ruby:*-slim-trixie` base image, pinned by SHA digest (see the `FROM` line for the exact version, which Dependabot bumps over time). Installs `build-essential`, `sqlite3`, and `libsqlite3-dev` because `cheatset`'s dependencies (nokogiri, sqlite3 gem) require C compilation. Sets `WORKDIR /tmp` so that mounted volumes at `/tmp` serve as the working directory. The entrypoint is `/usr/local/bundle/bin/cheatset`.
 
 2. **`Gemfile` / `Gemfile.lock`** — Pin `cheatset` to an exact version (`1.5.0`). `haml` is additionally pinned to `~> 5.2` to work around a rendering regression in `cheatset` 1.5.0 with haml 6+ (see `docs/TODO.md`). Both files are copied into the image and `Gemfile.lock` is used for reproducible builds (`bundle config set --local system 'true'` installs gems system-wide rather than into a bundle path).
 
