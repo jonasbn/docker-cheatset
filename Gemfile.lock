@@ -10,7 +10,7 @@ GEM
       sqlite3 (>= 1.6)
       thor (>= 1.0.1)
       unindent (>= 1.0)
-    crass (1.0.6)
+    crass (1.0.7)
     haml (5.2.2)
       temple (>= 0.8.0)
       tilt
