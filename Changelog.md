@@ -1,5 +1,27 @@
 # Change log for Docker-cheatset
 
+## 0.24.0 2026-10-26 maintenance release
+
+- Bumped Docker base image from `ruby:4.0.6-slim-trixie` to `ruby:4.0.8-slim-trixie`, via PR [#216](https://github.com/jonasbn/docker-cheatset/pull/216), [#220](https://github.com/jonasbn/docker-cheatset/pull/220), [#228](https://github.com/jonasbn/docker-cheatset/pull/228), [#232](https://github.com/jonasbn/docker-cheatset/pull/232) from @dependabot
+
+- Bumped `sqlite3` from `2.9.5` to `2.9.6` and `crass` from `1.0.6` to `1.0.7`, via PR [#230](https://github.com/jonasbn/docker-cheatset/pull/230), [#231](https://github.com/jonasbn/docker-cheatset/pull/231) from @dependabot
+
+- Bumped `docker/login-action` from `4.5.2` to `4.7.0`, via PR [#215](https://github.com/jonasbn/docker-cheatset/pull/215), [#233](https://github.com/jonasbn/docker-cheatset/pull/233) from @dependabot
+
+- Bumped `docker/build-push-action` from `7.3.0` to `7.4.0`, via PR [#227](https://github.com/jonasbn/docker-cheatset/pull/227) from @dependabot
+
+- Bumped `docker/setup-buildx-action` from `4.2.0` to `4.4.1`, via PR [#219](https://github.com/jonasbn/docker-cheatset/pull/219), [#225](https://github.com/jonasbn/docker-cheatset/pull/225) from @dependabot
+
+- Bumped `docker/setup-qemu-action` from `4.2.0` to `4.4.0`, via PR [#222](https://github.com/jonasbn/docker-cheatset/pull/222), [#226](https://github.com/jonasbn/docker-cheatset/pull/226) from @dependabot
+
+- Bumped `zizmorcore/zizmor-action` from `0.6.1` to `0.8.0`, via PR [#217](https://github.com/jonasbn/docker-cheatset/pull/217), [#223](https://github.com/jonasbn/docker-cheatset/pull/223), [#224](https://github.com/jonasbn/docker-cheatset/pull/224), [#229](https://github.com/jonasbn/docker-cheatset/pull/229), [#234](https://github.com/jonasbn/docker-cheatset/pull/234) from @dependabot
+
+- Bumped `rojopolis/spellcheck-github-actions` from `0.63.0` to `0.66.0`, via PR [#214](https://github.com/jonasbn/docker-cheatset/pull/214), [#218](https://github.com/jonasbn/docker-cheatset/pull/218) from @dependabot
+
+- Added `CODEOWNERS`, via PR [#213](https://github.com/jonasbn/docker-cheatset/pull/213)
+
+- Generalized Ruby base-image version references in `CLAUDE.md`, via PR [#221](https://github.com/jonasbn/docker-cheatset/pull/221)
+
 ## 0.23.0 2026-07-31 maintenance release
 
 - Bumped Docker base image from `ruby:3.2.10-slim-trixie` to `ruby:4.0.6-slim-trixie`, via PR [#182](https://github.com/jonasbn/docker-cheatset/pull/182), [#206](https://github.com/jonasbn/docker-cheatset/pull/206) from @dependabot
