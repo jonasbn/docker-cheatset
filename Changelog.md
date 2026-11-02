@@ -1,5 +1,13 @@
 # Change log for Docker-cheatset
 
+## 0.25.0 2026-11-02 maintenance release
+
+- Bumped Docker base image from `ruby:4.0.8-slim-trixie` to `ruby:4.0.9-slim-trixie`, via PR [#236](https://github.com/jonasbn/docker-cheatset/pull/236) from @dependabot
+
+- Bumped `crass` from `1.0.7` to `1.0.8`, which fixes a moderate security issue in the tokenizer (GHSA-pq4g-8rxf-4g29), via PR [#238](https://github.com/jonasbn/docker-cheatset/pull/238) from @dependabot
+
+- Bumped `rojopolis/spellcheck-github-actions` from `0.66.0` to `0.68.0`, via PR [#237](https://github.com/jonasbn/docker-cheatset/pull/237) from @dependabot
+
 ## 0.24.0 2026-10-26 maintenance release
 
 - Bumped Docker base image from `ruby:4.0.6-slim-trixie` to `ruby:4.0.8-slim-trixie`, via PR [#216](https://github.com/jonasbn/docker-cheatset/pull/216), [#220](https://github.com/jonasbn/docker-cheatset/pull/220), [#228](https://github.com/jonasbn/docker-cheatset/pull/228), [#232](https://github.com/jonasbn/docker-cheatset/pull/232) from @dependabot
