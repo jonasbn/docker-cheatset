@@ -49,3 +49,7 @@ Gemfile
 haml
 config
 wordlist
+GHSA
+pq
+rxf
+tokenizer
