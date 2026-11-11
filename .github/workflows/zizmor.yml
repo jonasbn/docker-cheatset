@@ -1,32 +1,26 @@
-# REF: https://github.com/zizmorcore/zizmor-action
-
-name: Zizmor Action
+name: GitHub Actions Security Analysis with zizmor
 
 on:
   push:
-    branches:
-      - master
-      - "claude/**"
+    branches: ["master"]
   pull_request:
-    branches:
-      - master
+
+permissions: {}
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
-permissions: {}
-
 jobs:
   zizmor:
-    name: Zizmor
+    name: Check workflows and actions with zizmor
     runs-on: ubuntu-latest
     permissions:
-      security-events: write # required to upload SARIF results to code scanning
-      contents: read # required to checkout the repository
-      actions: read # required by zizmor-action to inspect workflow run context
+      security-events: write # upload SARIF findings to the Code Scanning tab
+      contents: read # checkout the repository
+      actions: read # required by zizmor-action to resolve reusable workflows
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
