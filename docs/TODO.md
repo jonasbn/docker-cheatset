@@ -18,9 +18,9 @@ workaround.
 
 ### Status
 
-- A fix is prepared as commit `446270a` on the branch `fix-haml6-escape-html` in the
-  local clone `~/develop/github-forks/cheatset`. It is not pushed and no PR is opened.
-  The clone's `origin` is `Kapeli/cheatset` itself, so a personal fork is needed to push.
+- The fix is submitted upstream as <https://github.com/Kapeli/cheatset/pull/44>
+  (commit `446270a` on the branch `fix-haml6-escape-html`, pushed from the fork
+  `jonasbn/cheatset`). It is awaiting review and is not merged or released yet.
 - The proposed change is one line in `lib/cheatset/creator.rb`: pass `escape_html: false`
   to `Haml::Template.new`.
 
@@ -52,8 +52,8 @@ separate upstream follow-up. Check the generated output once the pin is lifted.
 
 ### Next steps
 
-1. Fork `Kapeli/cheatset`, push `fix-haml6-escape-html` and open the PR. The PR text is
-   drafted and mentions the missing test suite and the two remaining differences.
+1. Follow up on the upstream PR (Kapeli/cheatset pull 44), which mentions the missing
+   test suite and the two remaining differences.
 2. When a cheatset release containing the fix is out:
     - bump `cheatset` in `Gemfile` and regenerate `Gemfile.lock`
     - relax the haml pin to `~> 6.4` and remove the explanatory comment in `Gemfile`
