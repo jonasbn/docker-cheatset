@@ -13,6 +13,8 @@ updates:
     # Assign pull requests to an assignee
     assignees:
       - "jonasbn"
+    cooldown:
+      default-days: 7
   # Enable version updates for GitHub Actions
   - package-ecosystem: "github-actions"
     # Look for `.github/workflows` in the `root` directory
@@ -20,8 +22,12 @@ updates:
     # Check for updates once a week
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 7
   # Maintain dependencies for Bundler (Ruby)
   - package-ecosystem: "bundler"
     directory: "/"
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 7
